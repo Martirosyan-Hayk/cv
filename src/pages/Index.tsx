@@ -1,11 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import CVHeader from '../components/CVHeader';
+import CVSidebar from '../components/CVSidebar';
+import CVMainContent from '../components/CVMainContent';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 py-8">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="bg-white rounded-3xl shadow-elegant overflow-hidden animate-fade-in">
+          <CVHeader />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+            <CVSidebar />
+            <CVMainContent />
+          </div>
+        </div>
       </div>
     </div>
   );
