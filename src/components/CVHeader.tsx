@@ -20,11 +20,17 @@ const CVHeader = () => {
       
       <div className="relative z-10 text-center">
         <div className="w-40 h-40 mx-auto mb-8 rounded-full glass-effect border-4 border-white/30 flex items-center justify-center overflow-hidden floating-animation pulse-glow">
-          <img 
+          {/* Image temporarily commented out for GitHub Pages compatibility */}
+          {/* <img 
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face&auto=format" 
             alt="Hayk Martirosyan" 
             className="w-36 h-36 object-cover rounded-full"
-          />
+          /> */}
+          
+          {/* Placeholder initials instead of image */}
+          <div className="w-36 h-36 bg-gradient-to-br from-white/20 to-white/10 rounded-full flex items-center justify-center text-6xl font-bold text-white">
+            HM
+          </div>
         </div>
         
         <div className="animate-bounce-in delay-200">
