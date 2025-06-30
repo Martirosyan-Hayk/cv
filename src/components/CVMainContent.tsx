@@ -37,21 +37,6 @@ const CVMainContent = () => {
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      name: 'Hr-Drone',
-      description: 'Built an HR management system to streamline recruitment and employee management processes.',
-      technologies: '14 microservices, payment integration with Stripe, AWS serverless, AWS cloud, NATS, NestJS, PostgreSQL, Redis, Firebase, Meilisearch, n8n',
-      responsibilities: [
-        'Designed and implemented 14 microservices to handle various HR functions such as recruitment, payroll, and performance management.',
-        'Integrated Stripe for secure and efficient payment processing.',
-        'Utilized AWS serverless architecture to ensure scalability and reliability.',
-        'Employed NATS for microservice communication, enhancing system responsiveness and reliability.',
-        'Developed backend services using NestJS and PostgreSQL for robust data management.',
-        'Incorporated Redis and Firebase for caching and real-time updates.',
-        'Implemented search functionality with Meilisearch and automated workflows with n8n.'
-      ],
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
       name: 'KAFD',
       description: 'Built a management system to manage King Abdullah Financial District.',
       technologies: 'NestJS, Node.js, PostgreSQL, Redis, caching, Google Cloud, Google Maps, Google Storage, air-quality service, Weather-Stack, Uber and Careem integrations, permission management system, integration with traffic and real-time cameras, AI team integration',
@@ -67,6 +52,21 @@ const CVMainContent = () => {
         'Collaborated with the AI team to integrate AI-powered features into the system.'
       ],
       gradient: 'from-green-500 to-teal-500'
+    },
+    {
+      name: 'Hr-Drone',
+      description: 'Built an HR management system to streamline recruitment and employee management processes.',
+      technologies: '14 microservices, payment integration with Stripe, AWS serverless, AWS cloud, NATS, NestJS, PostgreSQL, Redis, Firebase, Meilisearch, n8n',
+      responsibilities: [
+        'Designed and implemented 14 microservices to handle various HR functions such as recruitment, payroll, and performance management.',
+        'Integrated Stripe for secure and efficient payment processing.',
+        'Utilized AWS serverless architecture to ensure scalability and reliability.',
+        'Employed NATS for microservice communication, enhancing system responsiveness and reliability.',
+        'Developed backend services using NestJS and PostgreSQL for robust data management.',
+        'Incorporated Redis and Firebase for caching and real-time updates.',
+        'Implemented search functionality with Meilisearch and automated workflows with n8n.'
+      ],
+      gradient: 'from-blue-500 to-cyan-500'
     },
     {
       name: 'Frisson',
