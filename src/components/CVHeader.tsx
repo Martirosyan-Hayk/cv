@@ -1,42 +1,60 @@
 
-import { Mail, Phone, Linkedin, Github, Edit } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Edit, Star, Sparkles } from 'lucide-react';
 
 const CVHeader = () => {
   return (
-    <header className="gradient-primary text-white px-8 py-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
+    <header className="relative bg-animated text-white px-8 py-16 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 text-white/20">
+        <Star size={20} className="floating-animation delay-100" />
+      </div>
+      <div className="absolute top-20 right-20 text-white/20">
+        <Sparkles size={24} className="floating-animation delay-300" />
+      </div>
+      <div className="absolute bottom-10 left-20 text-white/20">
+        <Star size={16} className="floating-animation delay-500" />
+      </div>
+      <div className="absolute bottom-20 right-10 text-white/20">
+        <Sparkles size={18} className="floating-animation delay-200" />
+      </div>
+      
       <div className="relative z-10 text-center">
-        <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center overflow-hidden animate-float">
+        <div className="w-40 h-40 mx-auto mb-8 rounded-full glass-effect border-4 border-white/30 flex items-center justify-center overflow-hidden floating-animation pulse-glow">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop&crop=face&auto=format" 
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face&auto=format" 
             alt="Hayk Martirosyan" 
-            className="w-full h-full object-cover rounded-full"
+            className="w-36 h-36 object-cover rounded-full"
           />
         </div>
-        <h1 className="text-5xl font-bold mb-3 tracking-tight">HAYK MARTIROSYAN</h1>
-        <p className="text-xl font-light opacity-90 mb-6">SOFTWARE ENGINEER</p>
         
-        <div className="flex flex-wrap justify-center gap-6 text-sm">
-          <a href="tel:+37477655799" className="flex items-center gap-2 hover:text-blue-200 transition-elegant">
-            <Phone size={16} />
-            +374 77655799
-          </a>
-          <a href="mailto:haykmartirosyan10.01@gmail.com" className="flex items-center gap-2 hover:text-blue-200 transition-elegant">
-            <Mail size={16} />
-            haykmartirosyan10.01@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/hayk-martirosyan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-elegant">
-            <Linkedin size={16} />
-            LinkedIn
-          </a>
-          <a href="https://github.com/Martirosyan-Hayk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-elegant">
-            <Github size={16} />
-            GitHub
-          </a>
-          <a href="https://medium.com/@martirosyanhayk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-elegant">
-            <Edit size={16} />
-            Medium
-          </a>
+        <div className="animate-bounce-in delay-200">
+          <h1 className="text-6xl font-bold mb-4 tracking-tight drop-shadow-lg">
+            HAYK MARTIROSYAN
+          </h1>
+          <div className="inline-block glass-effect px-6 py-3 rounded-full mb-8">
+            <p className="text-2xl font-light tracking-wide">SOFTWARE ENGINEER</p>
+          </div>
+        </div>
+        
+        <div className="flex flex-wrap justify-center gap-6 text-sm animate-fade-in-up delay-500">
+          {[
+            { icon: Phone, text: '+374 77655799', href: 'tel:+37477655799' },
+            { icon: Mail, text: 'haykmartirosyan10.01@gmail.com', href: 'mailto:haykmartirosyan10.01@gmail.com' },
+            { icon: Linkedin, text: 'LinkedIn', href: 'https://www.linkedin.com/in/hayk-martirosyan' },
+            { icon: Github, text: 'GitHub', href: 'https://github.com/Martirosyan-Hayk' },
+            { icon: Edit, text: 'Medium', href: 'https://medium.com/@martirosyanhayk' }
+          ].map((contact, index) => (
+            <a 
+              key={index}
+              href={contact.href} 
+              target={contact.href.startsWith('http') ? '_blank' : undefined}
+              rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full hover:bg-white/20 transition-magical hover:scale-105 hover:shadow-glow"
+            >
+              <contact.icon size={16} />
+              {contact.text}
+            </a>
+          ))}
         </div>
       </div>
     </header>

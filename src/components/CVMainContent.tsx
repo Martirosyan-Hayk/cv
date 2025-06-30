@@ -2,6 +2,7 @@
 import SectionTitle from './SectionTitle';
 import ExperienceItem from './ExperienceItem';
 import ProjectItem from './ProjectItem';
+import { User, Briefcase, FolderOpen } from 'lucide-react';
 
 const CVMainContent = () => {
   const experiences = [
@@ -32,7 +33,8 @@ const CVMainContent = () => {
         'Worked on implementing and validating email authentication protocols like DKIM, SPF, and DMARC.',
         'Maintained CI/CD pipelines with GitLab CI and managed service access and authentication with Keycloak.',
         'Collaborated with cross-functional teams to ensure system reliability and compliance with industry standards.'
-      ]
+      ],
+      gradient: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Hr-Drone',
@@ -46,7 +48,8 @@ const CVMainContent = () => {
         'Developed backend services using NestJS and PostgreSQL for robust data management.',
         'Incorporated Redis and Firebase for caching and real-time updates.',
         'Implemented search functionality with Meilisearch and automated workflows with n8n.'
-      ]
+      ],
+      gradient: 'from-blue-500 to-cyan-500'
     },
     {
       name: 'KAFD',
@@ -62,7 +65,8 @@ const CVMainContent = () => {
         'Developed a comprehensive permission management system to ensure secure access control.',
         'Integrated with traffic and real-time cameras to provide live monitoring capabilities.',
         'Collaborated with the AI team to integrate AI-powered features into the system.'
-      ]
+      ],
+      gradient: 'from-green-500 to-teal-500'
     },
     {
       name: 'Frisson',
@@ -78,39 +82,42 @@ const CVMainContent = () => {
         'Automated workflows with n8n and managed infrastructure with Terraform and Kubernetes.',
         'Incorporated Firebase for real-time updates and notifications.',
         'Utilized AWS Lambdas for serverless computing.'
-      ]
+      ],
+      gradient: 'from-orange-500 to-red-500'
     }
   ];
 
   return (
-    <main className="lg:col-span-2 p-8 space-y-10">
+    <main className="lg:col-span-2 p-8 space-y-10 animate-slide-in-right">
       {/* Profile Section */}
-      <section className="animate-slide-up">
-        <SectionTitle>PROFILE</SectionTitle>
-        <p className="text-gray-700 leading-relaxed">
-          A versatile software developer with a passion for innovation and a solid background in assembly language and C++. 
-          Experienced in using PostgreSQL, Typescript, Node.js, and Nest.js to create high-quality, scalable applications. 
-          Skilled in multiple programming languages, including C++, Go, and C#, with the ability to quickly pick up new technologies. 
-          Seeking new opportunities to put my skills to work and drive impact in the software development industry.
-        </p>
+      <section className="animate-fade-in-up delay-200">
+        <SectionTitle icon={User}>PROFILE</SectionTitle>
+        <div className="glass-effect rounded-2xl p-6 hover:bg-white/60 transition-magical">
+          <p className="text-gray-700 leading-relaxed text-lg">
+            A versatile software developer with a passion for innovation and a solid background in assembly language and C++. 
+            Experienced in using PostgreSQL, Typescript, Node.js, and Nest.js to create high-quality, scalable applications. 
+            Skilled in multiple programming languages, including C++, Go, and C#, with the ability to quickly pick up new technologies. 
+            Seeking new opportunities to put my skills to work and drive impact in the software development industry.
+          </p>
+        </div>
       </section>
 
       {/* Experience Section */}
-      <section className="animate-slide-up">
-        <SectionTitle>EXPERIENCE</SectionTitle>
+      <section className="animate-fade-in-up delay-300">
+        <SectionTitle icon={Briefcase}>EXPERIENCE</SectionTitle>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <ExperienceItem key={index} {...exp} />
+            <ExperienceItem key={index} {...exp} delay={index * 0.1} />
           ))}
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="animate-slide-up">
-        <SectionTitle>PROJECTS</SectionTitle>
+      <section className="animate-fade-in-up delay-400">
+        <SectionTitle icon={FolderOpen}>PROJECTS</SectionTitle>
         <div className="space-y-8">
           {projects.map((project, index) => (
-            <ProjectItem key={index} {...project} />
+            <ProjectItem key={index} {...project} delay={index * 0.1} />
           ))}
         </div>
       </section>
